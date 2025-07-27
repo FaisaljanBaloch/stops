@@ -12,6 +12,7 @@ library(tidyverse)
 library(primer.data)
 library(tidymodels)
 library(broom)
+library(gt)
 ```
 
 Fair and unbiased decision-making in law enforcement is crucial, especially when outcomes like arrests may be influenced by personal characteristics such as race. Using data from about 400,000 traffic stops in New Orleans and compiled by the Stanford Open Policing Project, we seek to examine the difference in arrest rates between Black and White drivers vary by location or time of day. This sample of entries from the real data, which is nearly 3.1 million records, may not fully represent the population.
@@ -20,3 +21,54 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
 $$
 
 with $Y \sim \text{Bernoulli}(\rho)$ where $\rho = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}$
+
+<!-- Fitted Model -->
+\begin{align*}
+\hat{\text{arrested}} =\ & 0.177 
++ 0.0614 \cdot \text{sexMale}
+- 0.0445 \cdot \text{raceWhite} \\
+&+ 0.0146 \cdot \text{zoneB}
++ 0.00610 \cdot \text{zoneC}
++ 0.0781 \cdot \text{zoneD} \\
+&+ 0.00190 \cdot \text{zoneE}
+- 0.00271 \cdot \text{zoneF}
++ 0.0309 \cdot \text{zoneG}
++ 0.0757 \cdot \text{zoneH}
+\end{align*}
+
+```{r}
+#| cache: true
+x <- stops |>
+  filter(race %in% c("black", "white")) |>
+  mutate(race = str_to_title(race), sex = str_to_title(sex))
+
+fit_stops <- linear_reg() |>
+  set_engine("lm") |>
+  fit(arrested ~ sex + race * zone, data = x)
+```
+
+```{r}
+model_tidy <- fit_stops |> tidy(conf.int = TRUE)
+
+# Generate the LaTeX table
+model_tidy |>
+  select(term, estimate, conf.low, conf.high) |>
+  mutate(across(where(is.numeric), ~ round(.x, 4))) |>
+  gt() |>
+  cols_label(
+    term = "Variable",
+    estimate = "Estimate",
+    conf.low = "95% CI Lower",
+    conf.high = "95% CI Upper"
+  ) |>
+  tab_header(
+    title = "Regression Estimates for Arrest Model"
+  ) |>
+  fmt_number(
+    columns = c(estimate, conf.low, conf.high),
+    decimals = 4
+  ) |>
+  opt_table_font(
+    font = list(gt::google_font("Lato"), "sans-serif")
+  )
+```

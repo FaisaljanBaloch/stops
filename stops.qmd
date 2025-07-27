@@ -2,5 +2,14 @@
 title: "Stops"
 author: "Faisal Jan"
 format: html
+execute: 
+  echo: false
 ---
 
+```{r}
+#| message: false
+library(tidyverse)
+library(primer.data)
+```
+
+Fair and unbiased decision-making in law enforcement is crucial, especially when outcomes like arrests may be influenced by personal characteristics such as race. Using data from about 400,000 traffic stops in New Orleans and compiled by the Stanford Open Policing Project, we seek to examine the difference in arrest rates between Black and White drivers vary by location or time of day.

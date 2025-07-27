@@ -10,6 +10,13 @@ execute:
 #| message: false
 library(tidyverse)
 library(primer.data)
+library(tidymodels)
+library(broom)
 ```
 
-Fair and unbiased decision-making in law enforcement is crucial, especially when outcomes like arrests may be influenced by personal characteristics such as race. Using data from about 400,000 traffic stops in New Orleans and compiled by the Stanford Open Policing Project, we seek to examine the difference in arrest rates between Black and White drivers vary by location or time of day.
+Fair and unbiased decision-making in law enforcement is crucial, especially when outcomes like arrests may be influenced by personal characteristics such as race. Using data from about 400,000 traffic stops in New Orleans and compiled by the Stanford Open Policing Project, we seek to examine the difference in arrest rates between Black and White drivers vary by location or time of day. This sample of entries from the real data, which is nearly 3.1 million records, may not fully represent the population.
+$$
+P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
+$$
+
+with $Y \sim \text{Bernoulli}(\rho)$ where $\rho = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}$

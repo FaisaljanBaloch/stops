@@ -99,7 +99,17 @@ window.Quarto = {
 </header>
 
 
-<p>Fair and unbiased decision-making in law enforcement is crucial, especially when outcomes like arrests may be influenced by personal characteristics such as race. Using data from about 400,000 traffic stops in New Orleans and compiled by the Stanford Open Policing Project, we seek to examine the difference in arrest rates between Black and White drivers vary by location or time of day. This sample of entries from the real data, which is nearly 3.1 million records, may not fully represent the population. <span class="math display">\[
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stops_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Fair and unbiased decision-making in law enforcement is crucial, especially when outcomes like arrests may be influenced by personal characteristics such as race. Using data from about 400,000 traffic stops in New Orleans and compiled by the Stanford Open Policing Project, we seek to examine the difference in arrest rates between Black and White drivers vary by location or time of day. This sample of entries from the real data, which is nearly 3.1 million records, may not fully represent the population. In Zone W, the predicted probability of arrest for Black male drivers is approximately 35.3% (95% CI: 33.5% to 37.1%), compared to just 28.1% (95% CI: 26.3% to 29.9%) for White male drivers, making it the zone with the highest overall arrest likelihood and one of the largest racial disparities.</p>
+<p><span class="math display">\[
 P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
 \]</span></p>
 <p>with <span class="math inline">\(Y \sim \text{Bernoulli}(\rho)\)</span> where <span class="math inline">\(\rho = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}\)</span></p>
@@ -118,24 +128,24 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
 \end{align*}\]</span></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="agrnbwhibu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ofdtqbzxim" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#agrnbwhibu table {
+#ofdtqbzxim table {
   font-family: Lato, sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#agrnbwhibu thead, #agrnbwhibu tbody, #agrnbwhibu tfoot, #agrnbwhibu tr, #agrnbwhibu td, #agrnbwhibu th {
+#ofdtqbzxim thead, #ofdtqbzxim tbody, #ofdtqbzxim tfoot, #ofdtqbzxim tr, #ofdtqbzxim td, #ofdtqbzxim th {
   border-style: none;
 }
 
-#agrnbwhibu p {
+#ofdtqbzxim p {
   margin: 0;
   padding: 0;
 }
 
-#agrnbwhibu .gt_table {
+#ofdtqbzxim .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -161,12 +171,12 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-left-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_caption {
+#ofdtqbzxim .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#agrnbwhibu .gt_title {
+#ofdtqbzxim .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -178,7 +188,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-bottom-width: 0;
 }
 
-#agrnbwhibu .gt_subtitle {
+#ofdtqbzxim .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -190,7 +200,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-top-width: 0;
 }
 
-#agrnbwhibu .gt_heading {
+#ofdtqbzxim .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -202,13 +212,13 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-right-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_bottom_border {
+#ofdtqbzxim .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_col_headings {
+#ofdtqbzxim .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -223,7 +233,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-right-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_col_heading {
+#ofdtqbzxim .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -243,7 +253,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   overflow-x: hidden;
 }
 
-#agrnbwhibu .gt_column_spanner_outer {
+#ofdtqbzxim .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -255,15 +265,15 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   padding-right: 4px;
 }
 
-#agrnbwhibu .gt_column_spanner_outer:first-child {
+#ofdtqbzxim .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#agrnbwhibu .gt_column_spanner_outer:last-child {
+#ofdtqbzxim .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#agrnbwhibu .gt_column_spanner {
+#ofdtqbzxim .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -275,11 +285,11 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   width: 100%;
 }
 
-#agrnbwhibu .gt_spanner_row {
+#ofdtqbzxim .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#agrnbwhibu .gt_group_heading {
+#ofdtqbzxim .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -305,7 +315,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   text-align: left;
 }
 
-#agrnbwhibu .gt_empty_group_heading {
+#ofdtqbzxim .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -320,15 +330,15 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   vertical-align: middle;
 }
 
-#agrnbwhibu .gt_from_md > :first-child {
+#ofdtqbzxim .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#agrnbwhibu .gt_from_md > :last-child {
+#ofdtqbzxim .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#agrnbwhibu .gt_row {
+#ofdtqbzxim .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -347,7 +357,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   overflow-x: hidden;
 }
 
-#agrnbwhibu .gt_stub {
+#ofdtqbzxim .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -360,7 +370,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   padding-right: 5px;
 }
 
-#agrnbwhibu .gt_stub_row_group {
+#ofdtqbzxim .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -374,15 +384,15 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   vertical-align: top;
 }
 
-#agrnbwhibu .gt_row_group_first td {
+#ofdtqbzxim .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#agrnbwhibu .gt_row_group_first th {
+#ofdtqbzxim .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#agrnbwhibu .gt_summary_row {
+#ofdtqbzxim .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -392,16 +402,16 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   padding-right: 5px;
 }
 
-#agrnbwhibu .gt_first_summary_row {
+#ofdtqbzxim .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_first_summary_row.thick {
+#ofdtqbzxim .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#agrnbwhibu .gt_last_summary_row {
+#ofdtqbzxim .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -411,7 +421,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-bottom-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_grand_summary_row {
+#ofdtqbzxim .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -421,7 +431,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   padding-right: 5px;
 }
 
-#agrnbwhibu .gt_first_grand_summary_row {
+#ofdtqbzxim .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -431,7 +441,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-top-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_last_grand_summary_row_top {
+#ofdtqbzxim .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -441,11 +451,11 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-bottom-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_striped {
+#ofdtqbzxim .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#agrnbwhibu .gt_table_body {
+#ofdtqbzxim .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -454,7 +464,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-bottom-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_footnotes {
+#ofdtqbzxim .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -468,7 +478,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-right-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_footnote {
+#ofdtqbzxim .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -477,7 +487,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   padding-right: 5px;
 }
 
-#agrnbwhibu .gt_sourcenotes {
+#ofdtqbzxim .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -491,7 +501,7 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   border-right-color: #D3D3D3;
 }
 
-#agrnbwhibu .gt_sourcenote {
+#ofdtqbzxim .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -499,72 +509,72 @@ P(Y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \cdots + \beta_n X_n)}}
   padding-right: 5px;
 }
 
-#agrnbwhibu .gt_left {
+#ofdtqbzxim .gt_left {
   text-align: left;
 }
 
-#agrnbwhibu .gt_center {
+#ofdtqbzxim .gt_center {
   text-align: center;
 }
 
-#agrnbwhibu .gt_right {
+#ofdtqbzxim .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#agrnbwhibu .gt_font_normal {
+#ofdtqbzxim .gt_font_normal {
   font-weight: normal;
 }
 
-#agrnbwhibu .gt_font_bold {
+#ofdtqbzxim .gt_font_bold {
   font-weight: bold;
 }
 
-#agrnbwhibu .gt_font_italic {
+#ofdtqbzxim .gt_font_italic {
   font-style: italic;
 }
 
-#agrnbwhibu .gt_super {
+#ofdtqbzxim .gt_super {
   font-size: 65%;
 }
 
-#agrnbwhibu .gt_footnote_marks {
+#ofdtqbzxim .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#agrnbwhibu .gt_asterisk {
+#ofdtqbzxim .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#agrnbwhibu .gt_indent_1 {
+#ofdtqbzxim .gt_indent_1 {
   text-indent: 5px;
 }
 
-#agrnbwhibu .gt_indent_2 {
+#ofdtqbzxim .gt_indent_2 {
   text-indent: 10px;
 }
 
-#agrnbwhibu .gt_indent_3 {
+#ofdtqbzxim .gt_indent_3 {
   text-indent: 15px;
 }
 
-#agrnbwhibu .gt_indent_4 {
+#ofdtqbzxim .gt_indent_4 {
   text-indent: 20px;
 }
 
-#agrnbwhibu .gt_indent_5 {
+#ofdtqbzxim .gt_indent_5 {
   text-indent: 25px;
 }
 
-#agrnbwhibu .katex-display {
+#ofdtqbzxim .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#agrnbwhibu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ofdtqbzxim div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
